@@ -1,0 +1,83 @@
+/* ==========================================
+   PENGATURAN ROUTING HALAMAN (SPA SYSTEM)
+   ========================================== */
+var HALAMAN = {
+  "": { 
+    id: "halaman-home", 
+    menu: "home", 
+    judul: "Beranda", 
+    tampil: tampilBeranda 
+  },
+  "detail": { 
+    id: "halaman-detail", 
+    menu: "detail", 
+    judul: "Detail Kursus & Modul", 
+    tampil: tampilDetail 
+  },
+  "testimoni": { 
+    id: "halaman-testimoni", 
+    menu: "testimoni", 
+    judul: "Testimoni & Pengajar", 
+    tampil: tampilTestimoni 
+  }
+};
+
+/* ---------- Fungsi Utama Perpindahan Halaman ---------- */
+function pindahHalaman() {
+  // Ambil hash dari URL, misal: #/detail -> jadi "detail"
+  var kunci = decodeURIComponent(location.hash).replace("#/", "").replace("#", "");
+  var halaman = HALAMAN[kunci] || HALAMAN[""];
+
+  // 1. Sembunyikan semua section, lalu tampilkan yang dipilih
+  var semuaSection = document.querySelectorAll(".page");
+  for (var i = 0; i < semuaSection.length; i++) {
+    semuaSection[i].hidden = true;
+  }
+  
+  var targetSection = document.getElementById(halaman.id);
+  if (targetSection) {
+    targetSection.hidden = false;
+  }
+
+  // 2. Tandai menu navigasi yang sedang aktif
+  var semuaMenu = document.querySelectorAll("[data-nav]");
+  for (var j = 0; j < semuaMenu.length; j++) {
+    if (semuaMenu[j].dataset.nav === halaman.menu) {
+      semuaMenu[j].setAttribute("aria-current", "page");
+    } else {
+      semuaMenu[j].removeAttribute("aria-current");
+    }
+  }
+
+  // 3. Jalankan fungsi tambahan halaman & ubah Judul Browser
+  halaman.tampil();
+  document.title = halaman.judul + " - Akademi Kreatif Online";
+  window.scrollTo(0, 0);
+}
+
+// Event listener saat hash di URL berubah
+window.onhashchange = pindahHalaman;
+
+// Jalankan saat pertama kali halaman dimuat
+window.onload = function() {
+  pindahHalaman();
+};
+
+
+/* ==========================================
+   FUNGSI KONTEN MASING-MASING HALAMAN
+   ========================================== */
+
+function tampilBeranda() {
+  console.log("Halaman Beranda Aktif");
+}
+
+function tampilDetail() {
+  console.log("Halaman Detail Kursus Aktif");
+  // Logika tambahan saat halaman detail dibuka
+}
+
+function tampilTestimoni() {
+  console.log("Halaman Testimoni & Pengajar Aktif");
+  // Logika tambahan saat halaman testimoni dibuka
+}
