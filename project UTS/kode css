@@ -1,0 +1,329 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  @font-face {
+    font-family: 'judul';
+    src: url('font/') format('truetype');
+}
+body {
+
+  background-color: #f6ecd9; /* Krem lembut khas latar web */
+  color: #5b3a29;            /* Teks utama coklat elegan */
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.7;
+  font-size: 14 px;
+  padding: 30px;             /* Mengganti margin 50px agar aman di semua ukuran layar */
+}
+
+a { 
+  color: #c97b7b; /* Warna Rose */
+  text-decoration: none; 
+}
+a:hover { 
+  text-decoration: underline;
+  color: #c8963e; /* Mustard saat di-hover */
+}
+
+/* ---------- Header & Navigasi Atas ---------- */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff8e8;
+  padding: 15px 30px;
+  border-bottom: 4px double #5b3a29;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 999;
+}
+
+.brand {
+  font-size: 24px;
+  color: #5b3a29;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.brand i {
+  color: #c8963e; /* Mustard */
+}
+
+/* Navigasi Menu Atas */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 99px;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #5b3a29;
+  background-color: #efe0c2;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+nav a:hover { 
+  background: #c8963e; /* Mustard */
+  color: #fff8e8;
+  text-decoration: none;
+}
+
+nav a.active, 
+nav a[aria-current="page"] {
+  background: #c97b7b; /* Rose */
+  color: #ffffff;
+}
+
+/* ---------- Konten Utama (Main & Section) ---------- */
+main {
+  background-color: #fff8e8;
+  padding: 40px;
+  border-radius: 8px;
+  border: 1px solid #5b3a29;
+  margin-bottom: 30px;
+  min-height: 400px; /* Memastikan area konten tidak kolaps/kosong */
+}
+
+.page {
+  display: block !important; /* Memastikan section selalu tampil secara utuh */
+}
+
+/* ---------- Galeri & Foto (250px x 250px, Border, Hover, Opacity) ---------- */
+.produk-gambar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 25px 0;
+}
+
+/* Kotak pembungkus tiap item foto agar teks di bawahnya rapi */
+.item-foto, .produk-gambar > div {
+  text-align: center;
+}
+
+.produk-gambar img {
+  width: 250px;             
+  height: 250px;           
+  object-fit: cover;       
+  border-radius: 10px;      
+  border: 3px solid #5b3a29;
+  outline: 2px solid #c8963e;
+  outline-offset: -6px;     
+  opacity: 0.8;   
+  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(91, 58, 41, 0.15);
+}
+
+.produk-gambar img:hover {
+  transform: scale(1.03);   /* Efek memperbesar halus saat di-hover */
+  opacity: 1;               /* Gambar menjadi jelas penuh */
+  box-shadow: 0 6px 12px rgba(91, 58, 41, 0.25);
+}
+
+/* ---------- Banner & Tampilan Utama ---------- */
+.header-banner {
+  background-color: #7d8f69; /* Sage */
+  color: #f6ecd9;
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  border: 2px solid #5b3a29;
+}
+
+.logo-teks {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.judul-utama, .judul-kategori {
+  color: #5b3a29;
+  margin-bottom: 15px;
+}
+
+.deskripsi-utama, .deskripsi-kategori, .kotak-informasi {
+  background-color: #fff8e8;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+/* ---------- Tabel ---------- */
+table { 
+  border-collapse: collapse; 
+  width: 100%;
+  background-color: #fff8e8;
+  margin: 20px 0;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #5b3a29;
+  text-align: left;
+}
+
+th {
+  background-color: #7d8f69; /* Sage untuk header tabel */
+  color: #f6ecd9;
+}
+
+ul, ol { 
+  margin: 10px 0; 
+  padding-left: 20px; 
+}
+
+@font-face {
+    font-family: 'judul';
+    src: url('font/Anak\ Bijak.ttf') format('truetype');
+}
+
+h1 { 
+   font-family:'judul';
+   background-color: transparent !important; 
+    border: none !important;               
+    border-radius: 0 !important;           
+    box-shadow: none !important;             
+    color: #353e85;                          
+    text-align: center;
+    padding: 10px 0;                        
+    font-size: 36px !important;                     
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow:2px 2px 4px rgb(255, 255, 0);
+}
+
+h2{
+ font-family:'judul';
+   background-color: transparent !important; 
+    border: none !important;               
+    border-radius: 0 !important;           
+    box-shadow: none !important;             
+    color: #1e6d73;                          
+    text-align: left;
+    padding: 10px 0;                        
+    font-size: 20px !important;                     
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow:2px 2px 4px rgb(255, 255, 0);
+}
+
+h3{
+  font-family:'judul';
+   background-color: transparent !important; 
+    border: none !important;               
+    border-radius: 0 !important;           
+    box-shadow: none !important;             
+    color: #39731e;                          
+    text-align: left;
+    padding: 10px 0;                        
+    font-size: 16px !important;                     
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow:2px 2px 4px rgb(255, 255, 0);
+}
+/* ---------- Form Pemesanan ---------- */
+.form {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 30px;
+  text-align: left;
+  background-color: #f6ecd9;
+  border: 3px double #5b3a29;
+  border-radius: 8px;
+}
+
+.form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #5b3a29;
+}
+
+.form input[type="text"],
+.form input[type="tel"],
+.form select,
+.form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #5b3a29;
+  border-radius: 4px;
+  background-color: #fff8e8;
+  font-family: inherit;
+}
+
+.form input[type="submit"] {
+  background-color: #c8963e; /* Mustard */
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.form input[type="submit"]:hover {
+  background-color: #5b3a29;
+}
+
+.judul-radio {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background-color: #5b3a29; /* Coklat tua */
+  color: #f6ecd9;
+  padding: 30px 20px;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+.footer h2, .footer h4 {
+  color: #c8963e; /* Mustard */
+}
+
+.kolom-footer p { 
+  margin: 10px 0; 
+}
+
+.footer a { 
+  color: #e8c27a; 
+}
+
+.footer a:hover {
+  color: #c97b7b;
+}
+
+.kontak li { 
+  margin-bottom: 6px; 
+}
+
+.hak-cipta {
+  max-width: 1040px;
+  margin: 24px auto 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(246, 236, 217, 0.2);
+  font-size: 14px;
+  text-align: center;
+  color: #f6ecd9;
+}
