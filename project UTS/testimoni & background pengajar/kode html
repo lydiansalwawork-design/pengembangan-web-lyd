@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimoni & Pengajar - Akademi Kreatif Online</title>
+    <link rel="icon" type="image/x-icon" href="images/logowebUTS.jpg">
+    <link rel="stylesheet" href="projekUTS.css">
+</head>
+<body>
+    <header class="top">
+        <a class="brand" href="home.html"><i>Akademi</i>Kreatif</a>
+        <nav aria-label="Navigasi utama">
+            <a href="home.html">Beranda</a>
+            <a href="detailkursus.html">Detail Kursus</a>
+            <a href="testimoni.html" class="active" aria-current="page">Testimoni & Pengajar</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page" id="halaman-testimoni">
+            <h1 class="judul-utama">Testimoni & Pengajar Akademi Kreatif</h1>
+            <p class="deskripsi-utama">
+                Kenali para instruktur profesional kami yang berpengalaman di bidangnya, dan baca ulasan jujur dari para alumni peserta kursus yang telah sukses berkarya!
+            </p>
+
+            <h2>Daftar Pengajar Profesional</h2>
+            <ul class="kotak-informasi">
+                <li>Siti Rahma, M.Sn. - Instruktur Utama Kelas Menjahit & Pola Busana (Pengalaman 8+ tahun di industri fashion).</li>
+                <li>Budi Santoso - Instruktur Senior Seni Merajut & Kerajinan Benang.</li>
+                <li>Dewi Lestari - Seniman Lukis & Instruktur Masterclass Kanvas.</li>
+                <li>Reza Pratama - Praktisi Senior & Mentor Bootcamp Desain Grafis Digital.</li>
+            </ul>
+
+            <h2>Testimoni Alumni Peserta</h2>
+            <div class="kotak-informasi">
+            <img src="images/testimoni.png">    
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="kontak">
+            <h2>Tentang Kami</h2>
+            <div class="kolom-footer">
+                <p>Akademi Kreatif adalah platform pembelajaran kursus online interaktif yang berfokus pada pengembangan bakat seni, kerajinan tangan, dan keterampilan desain digital.</p>
+                <ul>
+                    <li><b>WhatsApp:</b> 0812-3456-7890</li>
+                    <li><b>Email:</b> <a href="mailto:info@akademikreatif.id">info@akademikreatif.id</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="hak-cipta">
+            &copy; 2026 Akademi Kreatif Online. Hak Cipta Dilindungi.
+        </div>
+    </footer>
+
+    <script src="ProjekUTS.js"></script>
+</body>
+</html>
